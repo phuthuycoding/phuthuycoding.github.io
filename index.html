@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ta Manh Quyen — Staff Engineer</title>
+<meta name="description" content="Staff engineer working on distributed systems, event-driven architecture and developer tooling. Open source, writing, and things I have shipped.">
+<link rel="canonical" href="https://phuthuycoding.github.io/">
+<meta property="og:title" content="Ta Manh Quyen — Staff Engineer">
+<meta property="og:description" content="Distributed systems, event-driven architecture, developer tooling. Open source and writing.">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://phuthuycoding.github.io/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
+<style>
+:root{
+  --bg:#faf9f5; --surface:#fffefb; --sunken:#f2efe6;
+  --ink:#1f1e1c; --ink-soft:#5c5850; --ink-faint:#8a857a;
+  --line:#e6e1d6; --line-soft:#efebe1;
+  --accent:#c96442; --accent-soft:#f5e3dc; --accent-ink:#a04e31;
+  --radius:14px;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#1a1917; --surface:#232220; --sunken:#141312;
+    --ink:#f2efe8; --ink-soft:#b3ada1; --ink-faint:#847e73;
+    --line:#332f2a; --line-soft:#2a2724;
+    --accent:#e08363; --accent-soft:#3a2a24; --accent-ink:#eb9d81;
+  }
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:ui-sans-serif,-apple-system,"Segoe UI",Inter,system-ui,sans-serif;
+  font-size:16px;line-height:1.62;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:0 24px}
+a{color:var(--accent-ink);text-decoration:none}
+a:hover{text-decoration:underline}
+code{font-family:ui-monospace,"SF Mono",Menlo,monospace;font-size:.92em;background:var(--sunken);padding:2px 6px;border-radius:5px}
+.i{width:15px;height:15px;flex:0 0 auto}
+
+/* intro */
+.hero{padding:74px 0 8px}
+.who{display:flex;align-items:center;gap:17px;margin-bottom:24px}
+.avatar{width:60px;height:60px;border-radius:99px;background:var(--accent);color:#fff;
+  display:grid;place-items:center;font-size:21px;font-weight:660;flex:0 0 auto;letter-spacing:-.02em}
+h1{font-size:29px;letter-spacing:-.025em;margin:0;font-weight:660;line-height:1.2}
+.role{color:var(--ink-soft);font-size:16px;margin-top:3px}
+.bio{font-size:17.5px;color:var(--ink-soft);margin:0 0 26px}
+.bio b{color:var(--ink);font-weight:600}
+.links{display:flex;gap:9px;flex-wrap:wrap}
+.chip{display:inline-flex;align-items:center;gap:7px;padding:8px 14px;border-radius:9px;
+  background:var(--surface);border:1px solid var(--line);color:var(--ink);font-size:14.5px;font-weight:520;transition:.15s}
+.chip:hover{border-color:var(--accent);color:var(--accent-ink);text-decoration:none}
+.chip-primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.chip-primary:hover{background:var(--accent-ink);border-color:var(--accent-ink);color:#fff}
+
+section{padding:44px 0 0}
+h2{font-size:13px;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-faint);
+  margin:0 0 18px;font-weight:640}
+
+/* projects */
+.proj{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  padding:19px 21px;margin-bottom:11px;transition:.16s}
+.proj:hover{border-color:var(--accent);transform:translateY(-1px)}
+/* Link chinh phu kin ca the; cac link khac trong card nam tren no nho z-index. */
+.proj-name{position:static}
+.proj-name::after{content:"";position:absolute;inset:0;border-radius:var(--radius)}
+.proj a{position:relative;z-index:1}
+.proj-name:hover{text-decoration:none}
+.proj-top{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:5px}
+.proj-name{font-weight:640;color:var(--ink);font-size:16.5px}
+.tag{font-size:11.5px;padding:2px 8px;border-radius:99px;background:var(--sunken);
+  color:var(--ink-faint);font-weight:560;letter-spacing:.02em}
+.tag-live{background:var(--accent-soft);color:var(--accent-ink)}
+.stars{margin-left:auto;font-size:13px;color:var(--ink-faint);display:inline-flex;align-items:center;gap:4px}
+.proj p{margin:0;color:var(--ink-soft);font-size:14.8px;line-height:1.55}
+
+/* talks / writing */
+.row{display:flex;gap:14px;padding:13px 0;border-bottom:1px solid var(--line-soft)}
+.row:last-child{border-bottom:none}
+.row .when{color:var(--ink-faint);font-size:13.5px;flex:0 0 62px;padding-top:2px;font-variant-numeric:tabular-nums}
+.row .what{font-size:15px}
+.row .what b{font-weight:600;display:block;color:var(--ink)}
+.row .what span{color:var(--ink-soft);font-size:14.2px}
+
+footer{margin-top:56px;border-top:1px solid var(--line);padding:26px 0 46px;
+  color:var(--ink-faint);font-size:13.5px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-github" viewBox="0 0 16 16"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/></symbol>
+  <symbol id="i-npm" viewBox="0 0 24 24"><path fill="currentColor" d="M0 7.334v8h6.666v1.332H12v-1.332h12v-8H0zm6.666 6.664H5.334v-4H4v4H1.334V8.667h5.332v5.331zm4 0v1.336H8.001V8.667h5.334v5.332h-2.669zm12.001 0h-1.33v-4h-1.336v4h-1.33v-4h-1.336v4h-2.671V8.667h8.003v5.331zM10.665 10H12v2.667h-1.335V10z"/></symbol>
+  <symbol id="i-star" viewBox="0 0 16 16"><path fill="currentColor" d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.75.75 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25"/></symbol>
+  <symbol id="i-write" viewBox="0 0 16 16"><path fill="currentColor" d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758zm1.414 1.06a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354zm-1.237 3.723L9.75 4.81l-6.286 6.287a.25.25 0 0 0-.064.108l-.558 1.953 1.953-.558a.25.25 0 0 0 .108-.064z"/></symbol>
+  <symbol id="i-link" viewBox="0 0 16 16"><path fill="currentColor" d="M7.775 3.275a.75.75 0 0 0 1.06 1.06l1.25-1.25a2 2 0 1 1 2.83 2.83l-2.5 2.5a2 2 0 0 1-2.83 0 .75.75 0 0 0-1.06 1.06 3.5 3.5 0 0 0 4.95 0l2.5-2.5a3.5 3.5 0 0 0-4.95-4.95zm-4.69 9.64a2 2 0 0 1 0-2.83l2.5-2.5a2 2 0 0 1 2.83 0 .75.75 0 0 0 1.06-1.06 3.5 3.5 0 0 0-4.95 0l-2.5 2.5a3.5 3.5 0 0 0 4.95 4.95l1.25-1.25a.75.75 0 0 0-1.06-1.06l-1.25 1.25a2 2 0 0 1-2.83 0"/></symbol>
+</svg>
+
+<div class="wrap">
+
+  <div class="hero">
+    <div class="who">
+      <span class="avatar">TQ</span>
+      <div>
+        <h1>Ta Manh Quyen</h1>
+        <div class="role">Staff Engineer · Hanoi, Vietnam</div>
+      </div>
+    </div>
+    <p class="bio">Twelve years building backend and distributed systems. Most recently splitting
+    monoliths into <b>event-driven services</b>, and building the tooling that keeps a team honest
+    about what it ships. I write about the parts nobody puts in the postmortem.</p>
+    <div class="links">
+      <a class="chip chip-primary" href="https://quyentm.dev"><svg class="i"><use href="#i-write"/></svg> Blog</a>
+      <a class="chip" href="https://github.com/phuthuycoding"><svg class="i"><use href="#i-github"/></svg> GitHub</a>
+      <a class="chip" href="https://www.npmjs.com/~phuthuycoding"><svg class="i"><use href="#i-npm"/></svg> npm</a>
+      <a class="chip" href="https://linkedin.com/in/quyentm"><svg class="i"><use href="#i-link"/></svg> LinkedIn</a>
+    </div>
+  </div>
+
+  <section>
+    <h2>Projects</h2>
+
+    <div class="proj">
+      <div class="proj-top">
+        <a class="proj-name" href="https://github.com/phuthuycoding/markcv">markcv</a>
+        <span class="tag tag-live">npm</span>
+        <span class="tag">TypeScript</span>
+        <span class="stars" data-repo="markcv"><svg class="i"><use href="#i-star"/></svg><b></b></span>
+      </div>
+      <p>Markdown resume builder that explains <i>why</i> your CV will not fit two pages, and lints the
+      writing for overselling and underselling. CLI plus an MCP server so an AI agent can drive it.
+      <a href="https://phuthuycoding.github.io/markcv/">Landing page</a></p>
+    </div>
+
+    <div class="proj">
+      <div class="proj-top">
+        <a class="proj-name" href="https://github.com/phuthuycoding/moicle">moicle</a>
+        <span class="tag">TypeScript</span>
+        <span class="stars" data-repo="moicle"><svg class="i"><use href="#i-star"/></svg><b></b></span>
+      </div>
+      <p>Reusable AI agents, commands and skills for Claude Code, Cursor and other AI IDEs —
+      the conventions that keep generated code looking like the rest of the codebase.</p>
+    </div>
+
+    <div class="proj">
+      <div class="proj-top">
+        <a class="proj-name" href="https://github.com/phuthuycoding/vietnamese-nsfw-filter">vietnamese-nsfw-filter</a>
+        <span class="tag">Python</span>
+        <span class="stars" data-repo="vietnamese-nsfw-filter"><svg class="i"><use href="#i-star"/></svg><b></b></span>
+      </div>
+      <p>Lexicon-based NSFW detector for Vietnamese. Survives stripped diacritics and resolves the
+      homonyms that creates — no model, no GPU, so it runs inline on cheap hardware.</p>
+    </div>
+
+    <div class="proj">
+      <div class="proj-top">
+        <a class="proj-name" href="https://github.com/phuthuycoding/registry-ui">registry-ui</a>
+        <span class="tag">TypeScript</span>
+        <span class="stars" data-repo="registry-ui"><svg class="i"><use href="#i-star"/></svg><b></b></span>
+      </div>
+      <p>A small web UI for a private Docker registry: browse images, list tags, delete the ones
+      nobody remembers pushing.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Talks</h2>
+    <div class="row">
+      <span class="when">2023</span>
+      <span class="what"><b>NVM Cafe Tech Talk</b>
+      <span>From understanding microservice architecture to running it in production.</span></span>
+    </div>
+    <div class="row">
+      <span class="when">2022</span>
+      <span class="what"><b>Laravel Meetup Vietnam, Hanoi</b>
+      <span>Scaling strategies, running large systems, and database optimisation problems.</span></span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Writing</h2>
+    <p style="color:var(--ink-soft);margin:0 0 8px">Notes on engineering, mostly in Vietnamese, at
+    <a href="https://quyentm.dev">quyentm.dev</a> — caching as optimisation versus caching as a cover
+    for weak design, green test suites that still ship broken apps, and other things learned the hard way.</p>
+  </section>
+
+  <footer>
+    <span>Hanoi · <a href="mailto:me@quyentm.dev">me@quyentm.dev</a></span>
+    <span><a href="https://quyentm.dev">quyentm.dev</a></span>
+  </footer>
+
+</div>
+
+<script>
+// Star counts, fetched once for the repos listed above. Silent on failure:
+// a project card reading "0" invites the wrong conclusion.
+fetch("https://api.github.com/users/phuthuycoding/repos?per_page=100&sort=pushed")
+  .then(r => r.ok ? r.json() : Promise.reject())
+  .then(repos => {
+    const by = Object.fromEntries(repos.map(r => [r.name, r.stargazers_count]));
+    document.querySelectorAll(".stars").forEach(el => {
+      const n = by[el.dataset.repo];
+      if (n) el.querySelector("b").textContent = n;
+      else el.remove();
+    });
+  })
+  .catch(() => document.querySelectorAll(".stars").forEach(el => el.remove()));
+</script>
+</body>
+</html>
